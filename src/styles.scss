@@ -5,6 +5,48 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Jost Variable', sans-serif;
+  font-family: "Jost Variable", system-ui, sans-serif;
   background-color: black;
+  color: white;
 }
+
+.icon {
+  cursor: pointer;
+
+  &:hover {
+    stroke: blueviolet;
+    transform: scale(1.25);
+    transition: transform 0.2s ease;
+  }
+}
+
+.text-info {
+  font-size: 1em;
+  color: #b0afaf;
+  line-height: 1.2em;
+  margin: 0;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2em;
+  }
+}
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3em;
+  line-height: 1;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 3.15em;
+    font-weight: 850;
+  }
+}
+

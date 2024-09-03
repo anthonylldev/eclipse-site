@@ -1,0 +1,17 @@
+.content-social-media-container {
+  margin-bottom: 2rem;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .content-social-media-container {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .last-separator {
+    display: none;
+  }
+}

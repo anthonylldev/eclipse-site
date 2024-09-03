@@ -1,0 +1,30 @@
+p {
+  font-size: 1.25em;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.divider {
+  display: none;
+}
+
+.copy,
+.right {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  p {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 1rem;
+  }
+
+  .divider,
+  .copy,
+  .right {
+    display: flex;
+  }
+}

@@ -1,0 +1,19 @@
+<app-main-container>
+  <section class="brands">
+    <ul>
+      @for (item of brands; track item.title) {
+        <li>
+          <a
+            target="_blank"
+            [title]="item.title"
+            [attr.aria-label]="item.label"
+            [hreflang]="item.lang"
+            [href]="item.url"
+          >
+            <img [alt]="item.title" [src]="item.imgUrl"/>
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+</app-main-container>

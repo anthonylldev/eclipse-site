@@ -1,0 +1,186 @@
+
+nav {
+  height: 100dvh;
+  width: 100%;
+
+  .blur-container {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+  }
+
+  .blur-container.show {
+    backdrop-filter: blur(30px) brightness(75%);
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .menu-items.show {
+    display: block;
+    flex-direction: column;
+    list-style: none;
+    animation: fadeIn 0.3s ease-in-out forwards;
+    padding: 0 0 25px 38px;
+
+    li {
+      margin-bottom: 16px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: blueviolet;
+        }
+      }
+    }
+  }
+}
+
+.video-container {
+  overflow: hidden;
+  height: 100dvh;
+  width: auto;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.logo-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.menu {
+  height: 100px;
+  width: 100%;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all .8s cubic-bezier(.645, .045, .355, 1);
+}
+
+.cross input:checked + svg {
+  .line--1,
+  .line--3 {
+    --length: 22.627416998;
+  }
+
+  .line--2 {
+    --length: 0;
+  }
+}
+
+.back input:checked + svg {
+  .line--1,
+  .line--3 {
+    --length: 8.602325267;
+  }
+}
+
+.menu--1 {
+
+  .line--1,
+  .line--3 {
+    --total-length: 126.64183044433594;
+  }
+
+  .line--2 {
+    --total-length: 70;
+  }
+
+  input:checked + svg {
+    .line--1,
+    .line--3 {
+      --offset: -94.1149185097;
+    }
+
+    .line--2 {
+      --offset: -50;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    padding: 0 calc(8rem - 38px);
+  }
+
+  nav {
+    .menu-items.show {
+      height: 150px;
+      padding: 0 0 25px 8rem;
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        a {
+          font-size: 1.25em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .menu {
+    padding: 0;
+    width: calc(66% + 76px);
+    margin: auto;
+  }
+
+  nav {
+    .menu-items.show {
+      padding: 0 0 25px 0;
+      width: 66%;
+      margin: auto;
+    }
+  }
+}
