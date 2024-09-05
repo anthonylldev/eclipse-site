@@ -1,43 +1,5 @@
-<nav class="nav-container">
-  <div class="blur-container">
-    <div class="menu cross menu--1">
-      <label>
-        <input type="checkbox" id="menu-toggle" (change)="toggleMenu($event)">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35"/>
-          <path class="line--2" d="M0 50h70"/>
-          <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65"/>
-        </svg>
-      </label>
-    </div>
+<app-navbar [transparent]="true"/>
 
-    <ul class="menu-items">
-      <li>
-        <a>Inicio</a>
-      </li>
-      <li>
-        <a>Contacto</a>
-      </li>
-      <li>
-        <a>Eventos</a>
-      </li>
-      <li>
-        <a>Preguntas frecuentes</a>
+<app-video/>
 
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="video-container">
-  <video autoplay muted loop>
-    <source
-      src="https://ucarecdn.com/499f7698-f057-47de-beb9-cf8a7446627b/"
-      type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-<div class="logo-container">
-  <app-eclipse/>
-</div>
+<app-logo/>

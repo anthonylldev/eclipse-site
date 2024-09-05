@@ -1,1 +1,12 @@
-<p>contact works!</p>
+<div class="img-container">
+  <h1>Ponerse en contacto</h1>
+</div>
+
+<app-main-container>
+  <button class="btn btn-primary">
+    Contactar
+    <app-whatsapp [onlyPointer]="true"/>
+  </button>
+  <app-contact-form/>
+</app-main-container>
+

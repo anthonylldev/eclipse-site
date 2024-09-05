@@ -1,25 +1,48 @@
-svg {
-  width: 80%;
-  height: auto;
-}
-
-.container {
+.container:not(.navbarBrand) {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  svg {
+    width: 80%;
+    height: auto;
+  }
+}
+
+.navbarBrand {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  svg {
+    width: auto;
+    height: 50%;
+  }
 }
 
 
 @media screen and (min-width: 1200px) {
-  svg {
-    width: 60%;
+  .container:not(.navbarBrand) {
+    svg {
+      width: 60%;
+    }
+  }
+
+  .navbarBrand {
+    svg {
+      height: 80%;
+    }
   }
 }
 
 @media screen and (min-width: 1400px) {
-  svg {
-    width: 50%;
+  .container:not(.navbarBrand) {
+    svg {
+      width: 50%;
+    }
   }
 }

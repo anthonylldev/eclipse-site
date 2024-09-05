@@ -1,47 +1,9 @@
 import {Routes} from '@angular/router';
-import {ContactComponent, FaqComponent, HomeComponent, NavbarComponent, NavbarVideoComponent} from "./components";
+import {contactRoutes, homeRoutes} from "./components";
+import {faqRoutes} from "./components/faq/faq.routes";
 
 export const routes: Routes = [
-  {
-    path: '',
-    children: [
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: '',
-        component: NavbarVideoComponent,
-        outlet: 'navbar'
-      }
-    ]
-  },
-  {
-    path: 'contact',
-    children: [
-      {
-        path: '',
-        component: ContactComponent
-      },
-      {
-        path: '',
-        component: NavbarComponent,
-        outlet: 'navbar'
-      }
-    ]
-  },
-  {
-    path: 'faq',
-    children: [
-      {
-        path: '',
-        component: FaqComponent
-      },
-      {
-        path: '',
-        component: NavbarComponent,
-        outlet: 'navbar'
-      }
-    ]
-  }
+  homeRoutes,
+  contactRoutes,
+  faqRoutes
 ];
