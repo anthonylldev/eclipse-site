@@ -1,11 +1,12 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
-import {NgClass} from "@angular/common";
+import {NgClass, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-whatsapp',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './whatsapp.component.html',
   styleUrl: './whatsapp.component.scss',
@@ -13,4 +14,6 @@ import {NgClass} from "@angular/common";
 })
 export class WhatsappComponent {
   onlyPointer = input<boolean>();
+  size = input<string>();
+  stroke = input<number>();
 }

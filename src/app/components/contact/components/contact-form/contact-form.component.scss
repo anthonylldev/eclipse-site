@@ -1,0 +1,42 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 2rem;
+
+}
+
+.p-inputtext {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 0;
+  width: 100%;
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/* Hide the spinners (increment and decrement buttons) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+
+@media screen and (min-width: 1200px) {
+  form {
+    margin: 0 12rem 8rem 12rem;
+    gap: 4rem;
+  }
+}

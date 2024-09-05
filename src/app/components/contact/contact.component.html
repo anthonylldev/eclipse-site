@@ -3,10 +3,14 @@
 </div>
 
 <app-main-container>
-  <button class="btn btn-primary">
-    Contactar
-    <app-whatsapp [onlyPointer]="true"/>
-  </button>
-  <app-contact-form/>
-</app-main-container>
+  <app-whatsapp-button/>
 
+  <div class="container">
+    <app-timetable-info/>
+    <app-booking-info/>
+    <app-general-info/>
+  </div>
+
+<!--  <app-contact-form/>-->
+  <app-map/>
+</app-main-container>

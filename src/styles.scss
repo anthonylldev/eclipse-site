@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '../node_modules/@fontsource-variable/jost/wght.css';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "../public/scss/buttons";
+@import "../public/scss/typography";
 
 :root {
   --bg-primary: #070010;
   --primary: #5E3099;
+  --secondary: #DE42CC;
 }
 
 body {
@@ -15,29 +21,15 @@ body {
   color: white;
 }
 
-.btn {
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  line-height: 1.1;
-  font-family: 'Jost Variable', system-ui, sans-serif;
-}
-
-
-.btn.btn-primary {
-  background-color: var(--primary);
-  color: white;
+button, input, textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
   cursor: pointer;
 
   &:hover {
-    stroke: blueviolet;
+    stroke: var(--primary);
     transform: scale(1.25);
     transition: transform 0.2s ease;
   }
@@ -47,33 +39,24 @@ body {
   cursor: pointer;
 }
 
-.text-info {
-  font-size: 1em;
-  color: #b0afaf;
-  line-height: 1.2em;
-  margin: 0;
+.section-info, .section-timetable, .section-booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  @media screen and (min-width: 1200px) {
-    font-size: 1.2em;
+  h3 {
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    &:hover {
+      color: var(--primary)
+    }
+  }
+
+  .text-info {
+    margin-top: 0.5rem;
   }
 }
-
-h1 {
-  margin: 0;
-  text-transform: uppercase;
-  line-height: 1;
-  font-weight: 900;
-  font-size: 3em;
-}
-
-h2 {
-  margin: 0;
-  font-size: 3em;
-  line-height: 1;
-
-  @media screen and (min-width: 1400px) {
-    font-size: 3.15em;
-    font-weight: 850;
-  }
-}
-

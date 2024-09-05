@@ -1,1 +1,31 @@
-<p>contact-form works!</p>
+<section>
+  <form [formGroup]="contactForm">
+    <p-floatLabel>
+      <input pInputText type="text" id="name" formControlName="name"/>
+      <label for="name">Nombre</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <input pInputText type="text" id="surname" formControlName="surname"/>
+      <label for="surname">Apellidos</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <input pInputText type="email" id="email" formControlName="email"/>
+      <label for="name">Correo electr&oacute;nico</label>
+    </p-floatLabel>
+
+    <p-floatLabel class="phone-number-container">
+      <input pInputText type="number" id="phoneNumber" formControlName="phoneNumber"/>
+      <label for="phoneNumber">N&uacute;mero de tel&eacute;fono</label>
+    </p-floatLabel>
+
+    <p-floatLabel>
+      <textarea rows="5" id="message" pInputTextarea formControlName="message">
+      </textarea>
+      <label for="message">Mensaje</label>
+    </p-floatLabel>
+
+    <p-button class="full btn-primary" label="Enviar" [text]="true" [raised]="true" (onClick)="send()" ariaLabel="Enviar"/>
+  </form>
+</section>

@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://ucarecdn.com/2bc53c99-901b-4372-b9f4-970baf2630bf/-/format/auto/-/quality/smart/") no-repeat fixed center;
+    background: url("https://ucarecdn.com/2bc53c99-901b-4372-b9f4-970baf2630bf/-/format/auto/-/quality/smart/") no-repeat center;
     background-size: cover;
     filter: brightness(30%);
     z-index: -1;
@@ -27,8 +27,21 @@
   }
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8rem;
+}
+
 @media screen and (min-width: 1200px) {
   .img-container {
     height: 375px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

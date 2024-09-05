@@ -3,11 +3,12 @@
   width="48"
   height="48"
   viewBox="0 0 24 24"
-  stroke-width="1.5"
+  [attr.stroke-width]="stroke() ?? 1.5"
   stroke="#ffffff"
   fill="none"
   stroke-linecap="round"
   stroke-linejoin="round"
+  [ngStyle]="size() ? {'width': size(), 'height': size()} : {'width': '48px', 'height': '48px'}"
   [ngClass]="{'onlyPointer': onlyPointer(), 'icon': !onlyPointer()}"
 >
   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

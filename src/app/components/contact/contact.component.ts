@@ -1,7 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MainContainerComponent} from "../../layout";
 import {NgOptimizedImage} from "@angular/common";
-import {ContactFormComponent} from "./components";
+import {
+  BookingInfoComponent,
+  GeneralInfoComponent,
+  MapComponent,
+  TimetableInfoComponent,
+  WhatsappButtonComponent
+} from "./components";
 import {WhatsappComponent} from "../icons";
 
 @Component({
@@ -10,8 +16,12 @@ import {WhatsappComponent} from "../icons";
   imports: [
     MainContainerComponent,
     NgOptimizedImage,
-    ContactFormComponent,
-    WhatsappComponent
+    WhatsappComponent,
+    MapComponent,
+    WhatsappButtonComponent,
+    GeneralInfoComponent,
+    BookingInfoComponent,
+    TimetableInfoComponent
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',

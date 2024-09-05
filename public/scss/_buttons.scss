@@ -1,0 +1,48 @@
+.p-button {
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.3em;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  outline: none;
+
+  -webkit-user-select: none; /* Disable text selection */
+  -webkit-touch-callout: none; /* Disable callout, e.g., copy/paste menu */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Disable tap highlight */
+  -webkit-appearance: none; /* Remove default button styling */
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.full .p-button {
+  width: 100%;
+}
+
+.btn-primary .p-button {
+  background-color: var(--primary);
+  color: white;
+}
+
+a.p-button.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  font-family: 'Helvetica', system-ui, sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 1px;
+
+  .pi {
+    font-size: 1.3em;
+  }
+}
