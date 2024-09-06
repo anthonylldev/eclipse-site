@@ -1,0 +1,42 @@
+<section class="accordion">
+  <h3 class="accordion-title">Entradas</h3>
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleRefund()">
+      @if (refundShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Entradas en la puerta</label>
+    </button>
+
+    @if (refundShow) {
+      <div class="content">
+        <p>
+          Disponibilidad en puerta sujeta a aforo.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleTickets()">
+      @if (ticketsShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Política de reembolso</label>
+    </button>
+
+    @if (ticketsShow) {
+      <div class="content">
+        <p>
+          Puedes solicitar un reembolso durante las 48 horas siguientes al evento cancelado, dirigiéndote al punto de
+          venta o plataforma de venta de entradas donde compraste tus entradas. Será imprescindible presentar el
+          recibo de venta original.
+        </p>
+      </div>
+    }
+  </div>
+</section>

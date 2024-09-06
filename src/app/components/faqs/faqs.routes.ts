@@ -1,13 +1,13 @@
 import {Route} from "@angular/router";
-import {FaqComponent} from "./faq.component";
 import {NavbarComponent} from "../header";
+import {FaqsComponent} from "./faqs.component";
 
-export const faqRoutes: Route = {
-  path: 'faq',
+export const faqsRoutes: Route = {
+  path: 'faqs',
   children: [
     {
       path: '',
-      component: FaqComponent
+      component: FaqsComponent
     },
     {
       path: '',

@@ -22,6 +22,7 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.0",
     "@fontsource-variable/jost": "^5.0.20",
+    "@fontsource/metropolis": "^5.0.11",
     "express": "^4.18.2",
     "primeicons": "^7.0.0",
     "primeng": "17.18.9",

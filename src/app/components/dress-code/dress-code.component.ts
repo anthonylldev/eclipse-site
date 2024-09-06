@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-faq',
+  selector: 'app-dress-code',
   standalone: true,
   imports: [],
-  templateUrl: './faq.component.html',
-  styleUrl: './faq.component.scss',
+  templateUrl: './dress-code.component.html',
+  styleUrl: './dress-code.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FaqComponent {
+export class DressCodeComponent {
 
 }

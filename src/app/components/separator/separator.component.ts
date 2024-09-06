@@ -1,11 +1,12 @@
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
-import {NgStyle} from "@angular/common";
+import {NgClass, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-separator',
   standalone: true,
   imports: [
-    NgStyle
+    NgStyle,
+    NgClass
   ],
   templateUrl: './separator.component.html',
   styleUrl: './separator.component.scss',
@@ -13,4 +14,5 @@ import {NgStyle} from "@angular/common";
 })
 export class SeparatorComponent {
   slim = input<boolean>()
+  black = input<boolean>()
 }

@@ -1,0 +1,68 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .accordion-title {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+  }
+
+  .accordion-tab {
+    .header {
+      padding: 1rem;
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 1.3rem;
+      font-weight: 900;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+      text-align: start;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      label, i {
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      p {
+        padding: 0 1rem 1rem 1rem;
+        text-align: start;
+        color: white;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.2em;
+        margin: 0;
+
+        a {
+          color: var(--primary);
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        @media screen and (min-width: 1200px) {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .accordion {
+    .accordion-title {
+      font-size: 3em;
+    }
+  }
+}

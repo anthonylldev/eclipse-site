@@ -1,22 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '../node_modules/@fontsource-variable/jost/wght.css';
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+@import '../node_modules/@fontsource-variable/jost/wght.css';
+@import '../node_modules/@fontsource/metropolis/400.css';
+@import '../node_modules/@fontsource/metropolis/500.css';
+@import '../node_modules/@fontsource/metropolis/600.css';
+@import '../node_modules/@fontsource/metropolis/700.css';
+@import '../node_modules/@fontsource/metropolis/800.css';
+@import '../node_modules/@fontsource/metropolis/900.css';
 @import "../public/scss/buttons";
 @import "../public/scss/typography";
+@import "../public/scss/accordion";
 
 :root {
-  --bg-primary: #070010;
-  --primary: #5E3099;
-  --secondary: #DE42CC;
+  --primary: blueviolet;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Jost Variable", system-ui, sans-serif;
+  font-family: "Metropolis", system-ui, sans-serif;
   background-color: black;
   color: white;
 }
@@ -58,5 +63,31 @@ button, input, textarea {
 
   .text-info {
     margin-top: 0.5rem;
+  }
+}
+
+.title-img-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 95%);
+  margin-bottom: 4rem;
+
+  h1 {
+    text-align: center;
+    color: #F0F0F0BF;
+    font-weight: 700;
+    mix-blend-mode: luminosity;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title-img-container {
+    height: 500px;
   }
 }

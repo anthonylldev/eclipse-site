@@ -1,0 +1,120 @@
+<section class="accordion">
+  <h3 class="accordion-title">Acceso a Eclipse</h3>
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleSecurity()">
+      @if (securityShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Política de seguridad</label>
+    </button>
+
+    @if (securityShow) {
+      <div class="content">
+        <p>
+          La protección y seguridad de los clientes de Eclipse es siempre nuestra máxima prioridad.
+        </p>
+        <p>
+          Eclipse se reserva el derecho de admisión a cualquier persona que incumpla nuestra política de
+          seguridad.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleDressCode()">
+      @if (dressCodeShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Código de Vestimenta</label>
+    </button>
+
+    @if (dressCodeShow) {
+      <div class="content">
+        <p>
+          Te animamos a vestir de manera elegante. Esto incluye camisas de vestir, blusas y tops de moda, así como
+          pantalones, faldas o vestidos correctamente ajustados.
+        </p>
+        <p>
+          Por favor, usa calzado apropiado. Aunque las zapatillas elegantes pueden ser aceptables, no permitimos el
+          uso de calzado excesivamente casual o atlético, como chanclas y sandalias de playa.
+        </p>
+        <p>
+          Para mantener nuestra atmósfera sofisticada, no permitimos ropa deportiva como camisetas de deporte,
+          pantalones deportivos o ropa atlética.
+        </p>
+        <p>
+          <a routerLink="/dress-code">Dress code</a>
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleBag()">
+      @if (bagShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>¿Cuál es la política de bolsos?</label>
+    </button>
+
+    @if (bagShow) {
+      <div class="content">
+        <p>
+          No se permiten mochilas, maletas ni bolsos grandes. Por la seguridad y comodidad de todos nuestros clientes,
+          se denegará la entrada a todo lo que supere el tamaño estándar de un bolso de mano.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleIdentification()">
+      @if (identificationShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Identificación</label>
+    </button>
+
+    @if (identificationShow) {
+      <div class="content">
+        <p>
+          Los clientes deben presentar un documento de identidad válido al entrar.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleAge()">
+      @if (ageShow) {
+      <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>¿Cuál es la edad mínima para acceder?</label>
+    </button>
+
+    @if (ageShow) {
+      <div class="content">
+        <p>
+          En cumplimiento de la ley, los asistentes deben ser mayores de 18 años para acceder a Eclipse. Se
+          denegará la entrada a cualquier persona menor de 18 años o que no pueda demostrar su edad con un documento
+          de identidad original, válido y en vigor.
+        </p>
+        <p>
+          No se permitirá la entrada a menores de 18 años aunque vayan acompañados de un adulto y/o de sus
+          padres/tutores legales.
+        </p>
+      </div>
+    }
+  </div>
+</section>

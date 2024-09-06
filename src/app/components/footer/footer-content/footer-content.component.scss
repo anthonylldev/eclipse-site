@@ -14,6 +14,10 @@ p {
   display: block;
 }
 
+.copy {
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 1200px) {
   p {
     display: flex;
@@ -26,5 +30,6 @@ p {
   .copy,
   .right {
     display: flex;
+    margin: 0;
   }
 }

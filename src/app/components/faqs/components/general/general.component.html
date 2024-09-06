@@ -1,0 +1,129 @@
+<section class="accordion">
+  <h3 class="accordion-title">Preguntas frecuentes</h3>
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleCard()">
+      @if (cardShow) {
+        <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>¿Puedo pagar con tarjeta?</label>
+    </button>
+
+    @if (cardShow) {
+      <div class="content">
+        <p>
+          Aceptamos pagos con tecnología contactless y con tarjetas Mastercard, Visa, Union Pay, Maestro y American
+          Express. Esta última puede experimentar ocasionalmente dificultades, por favor avísanos con antelación
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleCash()">
+      @if (cashShow) {
+        <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>¿Se acepta pago en efectivo?</label>
+    </button>
+
+    @if (cashShow) {
+      <div class="content">
+        <p>
+          También aceptamos pagos en efectivo, limitados al monto permitido según la ley vigente.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleDrinkFood()">
+      @if (drinkFoodShow) {
+        <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Política de alimentos y bebidas</label>
+    </button>
+
+    @if (drinkFoodShow) {
+      <div class="content">
+        <p>
+          Está estrictamente prohibido introducir alimentos o bebidas en las instalaciones de Eclipse.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="togglePhotoVideo()">
+      @if (photoVideoShow) {
+        <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Política de foto y video</label>
+    </button>
+
+    @if (photoVideoShow) {
+      <div class="content">
+        <p>
+          Queremos que atesores tu experiencia en Eclipse, por lo que está permitido tomar fotos y videos para uso
+          personal con un smartphone. Sin embargo, no se permite ningún tipo de filmación o fotografía con fines
+          comerciales.
+        </p>
+        <p>
+          Te invitamos a disfrutar y compartir este contenido a través de nuestras redes sociales.
+        </p>
+        <p>
+          Al comprar tu entrada para Eclipse, das tu consentimiento expreso para ser filmado o fotografiado por
+          nuestro equipo, y dicho contenido podría ser publicado en nuestras redes sociales u otros canales con fines
+          publicitarios.
+        </p>
+        <p>
+          Para obtener más información, consulta nuestra Política de Privacidad.
+          Si no deseas ser grabado o fotografiado, por favor, informa a nuestro personal y evita posar para fotos.
+        </p>
+      </div>
+    }
+  </div>
+
+  <div class="accordion-tab">
+    <button class="header" (click)="toggleLost()">
+      @if (lostShow) {
+        <i class="pi pi-minus"></i>
+      } @else {
+        <i class="pi pi-plus"></i>
+      }
+      <label>Objectos perdidos</label>
+    </button>
+
+    @if (lostShow) {
+      <div class="content">
+        <p>
+          Puedes reclamar cualquier objeto perdido durante el horario de apertura o enviando un correo a
+          <a
+            target="_blank"
+            title="Mail"
+            aria-label="Mail de Eclipse, se abrirá en una nueva pestaña"
+            hreflang="es"
+            href="mailto:discoeclipse24@gmail.com"
+          >
+            {{ "discoeclipse24@gmail.com" }}
+          </a>
+        </p>
+        <p>
+          La propiedad no se hará responsable de ningún objeto
+          perdido en Eclipse. Los artículos olvidados, perdidos o abandonados, cuyo origen sea
+          desconocido y que
+          sean encontrados en el recinto, serán custodiados durante un máximo de quince días antes de ser
+          entregados a la
+          Guardia Civil, quien se encargará de ellos.
+        </p>
+      </div>
+    }
+  </div>
+</section>
