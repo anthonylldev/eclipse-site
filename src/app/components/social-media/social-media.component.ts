@@ -6,7 +6,7 @@ import {
   MailComponent,
   TiktokComponent,
   WhatsappComponent
-} from "../../icons";
+} from "../icons";
 
 @Component({
   selector: 'app-social-media',

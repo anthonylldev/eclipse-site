@@ -13,6 +13,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 import {CheckboxModule} from "primeng/checkbox";
 import {LogoComponent} from "../navbar-video/components";
 import {EclipseComponent} from "../../icons";
+import {SocialMediaComponent} from "../../social-media";
+import {MainContainerComponent} from "../../../layout";
 
 @Component({
   selector: 'app-navbar',
@@ -23,7 +25,9 @@ import {EclipseComponent} from "../../icons";
     RouterLinkActive,
     CheckboxModule,
     LogoComponent,
-    EclipseComponent
+    EclipseComponent,
+    SocialMediaComponent,
+    MainContainerComponent
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -42,8 +46,7 @@ export class NavbarComponent {
         this.renderer.addClass(this.menuItems.nativeElement, 'show');
         this.renderer.addClass(this.blurContainer.nativeElement, 'show');
       } else {
-        this.renderer.removeClass(this.menuItems.nativeElement, 'show');
-        this.renderer.removeClass(this.blurContainer.nativeElement, 'show');
+        this.hidde();
       }
     }
   }
@@ -59,6 +62,18 @@ export class NavbarComponent {
       if (this.blurContainer) {
         this.renderer.removeClass(this.blurContainer.nativeElement, 'showBlur');
       }
+    }
+
+    if (this.menuToggle?.nativeElement.checked) {
+      this.menuToggle.nativeElement.checked = false;
+      this.hidde();
+    }
+  }
+
+  private hidde() {
+    if (this.menuItems && this.menuToggle && this.blurContainer) {
+      this.renderer.removeClass(this.menuItems.nativeElement, 'show');
+      this.renderer.removeClass(this.blurContainer.nativeElement, 'show');
     }
   }
 }

@@ -17,27 +17,32 @@
       }
     </div>
 
-    <ul #menuItems class="menu-items">
-      <li>
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          Inicio
-        </a>
-      </li>
-      <li>
-        <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          Contacto
-        </a>
-      </li>
-      <li>
-        <a routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          Calendario
-        </a>
-      </li>
-      <li>
-        <a routerLink="/faqs" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          Preguntas frecuentes
-        </a>
-      </li>
-    </ul>
+    <div #menuItems class="menu-items">
+      <ul>
+        <li>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Contacto
+          </a>
+        </li>
+        <li>
+          <a routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Calendario
+          </a>
+        </li>
+        <li>
+          <a routerLink="/faqs" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Preguntas frecuentes
+          </a>
+        </li>
+      </ul>
+      <div class="social-media-container">
+        <app-social-media/>
+      </div>
+    </div>
   </div>
 </nav>

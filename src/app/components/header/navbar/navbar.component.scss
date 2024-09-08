@@ -20,7 +20,7 @@ nav {
     right: 0;
 
     &.show {
-      background:rgba(0,0,0,.7);
+      background: rgba(0, 0, 0, .7);
       backdrop-filter: blur(5px);
 
       .menu {
@@ -33,32 +33,43 @@ nav {
     display: none;
 
     &.show {
-      display: block;
+      height: calc(100vh - 100px);
       flex-direction: column;
-      list-style: none;
       animation: fadeIn 0.3s ease-in-out forwards;
-      padding: 0 0 25px 38px;
+      display: flex;
+      justify-content: space-between;
 
-      li {
-        margin-bottom: 16px;
+      ul {
+        margin: 0;
+        list-style: none;
 
-        a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: text-shadow 0.3s ease-in-out;
+        li {
+          margin-bottom: 2rem;
 
-          &:hover {
-            color: rgba(255, 255, 255, 0.75);
-            cursor: pointer;
-          }
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: text-shadow 0.3s ease-in-out;
+            font-size: 1.5rem;
 
-          &.active {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
+            &:hover {
+              color: rgba(255, 255, 255, 0.75);
+              cursor: pointer;
+            }
+
+            &.active {
+              text-decoration: underline;
+              text-decoration-thickness: 2px;
+              text-underline-offset: 4px;
+            }
           }
         }
+      }
+
+      .social-media-container {
+        padding: 0 38px 1rem 38px;
+        width: 100%;
       }
     }
   }
@@ -163,30 +174,36 @@ path {
 @media screen and (min-width: 1200px) {
   .menu {
     padding: 0 calc(8rem - 38px);
-    width: calc(100% - calc(19rem - 76px));
+    width: calc(100% - 8rem);
   }
 
   nav {
     .menu-items.show {
-      height: 150px;
-      padding: 0 0 25px 8rem;
-      display: flex;
-      flex-direction: row;
-      gap: 4rem;
-      justify-content: center;
-      align-items: center;
+      padding-left: calc(8rem - 38px);
 
-      li {
-        a {
-          font-size: 1.25em;
-          font-weight: 900;
+      ul {
+        margin-top: 2rem;
+        padding-left: 38px;
+
+        li {
+          margin-bottom: 3rem;
+
+          a {
+            font-size: 2em;
+            font-weight: 900;
+          }
         }
+      }
+
+      .social-media-container {
+        display: flex;
+        align-self: center;
       }
     }
   }
 
   .nav-logo-container {
-    right: calc(8rem - 38px);
+    right: 0;
   }
 }
 
@@ -199,10 +216,19 @@ path {
 
   nav {
     .menu-items.show {
-      padding: 0 0 25px 0;
       width: 66%;
       margin: auto;
-      height: 250px
+      padding: 0;
+
+      ul {
+        padding: 0;
+
+        li {
+          a {
+            font-size: 2.2em;
+          }
+        }
+      }
     }
   }
 
