@@ -10,21 +10,25 @@
       </p>
     </div>
 
-    <img
-      class="first"
-      aria-label="Image DSC05015"
-      alt="DSC05015"
-      ngSrc="https://ucarecdn.com/19c63d3a-85d6-42ec-8d43-7820fe38941c/-/preview/1000x562/"
-      height="3480"
-      width="6192"
-      priority/>
+    @defer(on viewport) {
+      <img
+        class="first"
+        aria-label="Image DSC05015"
+        alt="DSC05015"
+        ngSrc="https://ucarecdn.com/19c63d3a-85d6-42ec-8d43-7820fe38941c/-/preview/"
+        height="3480"
+        width="6192"
+        priority/>
 
-    <img
-      class="last"
-      aria-label="Image DSC05247"
-      alt="DSC05247"
-      ngSrc="https://ucarecdn.com/0a25e20b-ddd2-4552-8cc4-db8ab19a4710/-/preview/1000x562/"
-      height="3480"
-      width="6192"/>
+      <img
+        class="last"
+        aria-label="Image DSC05247"
+        alt="DSC05247"
+        ngSrc="https://ucarecdn.com/0a25e20b-ddd2-4552-8cc4-db8ab19a4710/-/preview/"
+        height="3480"
+        width="6192"/>
+    } @placeholder {
+      <div></div>
+    }
   </section>
 </app-main-container>

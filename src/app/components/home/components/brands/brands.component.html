@@ -3,15 +3,19 @@
     <ul>
       @for (item of brands; track item.title) {
         <li>
-          <a
-            target="_blank"
-            [title]="item.title"
-            [attr.aria-label]="item.label"
-            [hreflang]="item.lang"
-            [href]="item.url"
-          >
-            <img [alt]="item.title" [src]="item.imgUrl"/>
-          </a>
+          @defer (on viewport) {
+            <a
+              target="_blank"
+              [title]="item.title"
+              [attr.aria-label]="item.label"
+              [hreflang]="item.lang"
+              [href]="item.url"
+            >
+              <img [alt]="item.title" [src]="item.imgUrl"/>
+            </a>
+          } @placeholder {
+            <a href=""></a>
+          }
         </li>
       }
     </ul>
