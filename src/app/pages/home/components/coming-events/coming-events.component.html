@@ -1,0 +1,29 @@
+<app-main-container>
+  <section>
+    <h1>Próximos eventos</h1>
+
+    @if ((events$ | async)?.body ?? []; as events) {
+      <div class="card-container">
+        @for (event of events; track event.id) {
+          @defer (on viewport) {
+            <app-event-card [event]="event"/>
+          } @placeholder {
+            <div class="placeholder"></div>
+          }
+        }
+      </div>
+    }
+
+    <div class="btn-container">
+      <p-button
+        (onClick)="navigate()"
+        class="uppercase"
+        pRipple
+        label="Ver todos los eventos"
+        severity="help"
+        [rounded]="true"
+        [routerLink]="['/events']"
+        [outlined]="true"/>
+    </div>
+  </section>
+</app-main-container>

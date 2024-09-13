@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {SeparatorComponent} from "../separator";
 import {SocialMediaComponent} from "../social-media";
 import {MainContainerComponent} from "../../layout";
-import {FooterContentComponent} from "./footer-content";
+import {FooterContentComponent} from "./components/footer-content";
 
 @Component({
   selector: 'app-footer',

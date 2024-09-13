@@ -1,6 +1,5 @@
 import {Routes} from '@angular/router';
-import {contactRoutes, faqsRoutes, homeRoutes} from "./components";
-import {dressCodeRoutes} from "./components/dress-code";
+import {contactRoutes, dressCodeRoutes, faqsRoutes, homeRoutes} from "./pages";
 
 export const routes: Routes = [
   homeRoutes,
