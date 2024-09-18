@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, input} from '@angular/core';
 import {IEvent} from "../../../../../model";
 import {Ripple} from "primeng/ripple";
 import {DatePipe, NgOptimizedImage} from "@angular/common";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-event-card',
@@ -19,4 +19,9 @@ import {RouterLink} from "@angular/router";
 })
 export class EventCardComponent {
   event = input.required<IEvent>();
+  router = inject(Router)
+
+  navigate() {
+    this.router.navigate(['/events', this.event().id])
+  }
 }

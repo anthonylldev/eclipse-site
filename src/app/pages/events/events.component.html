@@ -1,0 +1,25 @@
+<div class="events-container">
+  <h1>Eventos</h1>
+</div>
+
+<app-main-container>
+  <section>
+    @if ((events$ | async)?.body ?? null; as events) {
+      @for (event of events; track event.id) {
+        @defer (on viewport) {
+          <app-event-card [event]="event"/>
+        } @placeholder {
+          <div class="placeholder"></div>
+        }
+      }
+    } @else {
+      <h2>No hay eventos próximos.</h2>
+      <p>
+        Puedes ver los eventos anteriores.
+        <a routerLink="/events/previous">
+          Aquí
+        </a>
+      </p>
+    }
+  </section>
+</app-main-container>

@@ -11,11 +11,19 @@ export class EventService {
   resourceUrl = environment.apiUrl + 'events';
   http = inject(HttpClient);
 
+  getAllEvents(): Observable<HttpResponse<IEvent[]>> {
+    return this.http.get<IEvent[]>(this.resourceUrl, {observe: 'response'})
+  }
+
   getComingEvents(): Observable<HttpResponse<IEvent[]>> {
     return this.http.get<IEvent[]>(`${this.resourceUrl}/coming`, {observe: 'response'});
   }
 
-  getEventById(id: number): Observable<HttpResponse<IEvent>> {
+  getPreviousEvents(): Observable<HttpResponse<IEvent[]>> {
+    return this.http.get<IEvent[]>(`${this.resourceUrl}/previous`, {observe: 'response'});
+  }
+
+  getEventById(id: string): Observable<HttpResponse<IEvent>> {
     return this.http.get<IEvent>(`${this.resourceUrl}/${id}`, {observe: 'response'});
   }
 }

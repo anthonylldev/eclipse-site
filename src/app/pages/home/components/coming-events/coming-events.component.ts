@@ -8,7 +8,7 @@ import {AsyncPipe} from "@angular/common";
 import {EventCardComponent} from "./event-card";
 import {Button} from "primeng/button";
 import {Ripple} from "primeng/ripple";
-import {Router, RouterLink} from "@angular/router";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-coming-events',
@@ -27,10 +27,5 @@ import {Router, RouterLink} from "@angular/router";
 })
 export class ComingEventsComponent {
   private eventService = inject(EventService);
-  private router = inject(Router);
   events$: Observable<HttpResponse<IEvent[]>> = this.eventService.getComingEvents();
-
-  navigate() {
-    this.router.navigate(['/events']);
-  }
 }
