@@ -1,6 +1,6 @@
 <app-main-container>
   <section>
-    <h1>Próximos eventos</h1>
+    <h2>Próximos eventos</h2>
 
     @if ((events$ | async)?.body ?? []; as events) {
       <div class="card-container">

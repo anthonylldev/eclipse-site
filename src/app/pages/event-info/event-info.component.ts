@@ -4,15 +4,16 @@ import {EventService} from "../../services";
 import {Observable} from "rxjs";
 import {HttpResponse} from "@angular/common/http";
 import {IEvent} from "../../model";
-import {AsyncPipe} from "@angular/common";
+import {AsyncPipe, NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-event-info',
   standalone: true,
-  imports: [
-    MainContainerComponent,
-    AsyncPipe
-  ],
+    imports: [
+        MainContainerComponent,
+        AsyncPipe,
+        NgOptimizedImage
+    ],
   templateUrl: './event-info.component.html',
   styleUrl: './event-info.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
