@@ -1,0 +1,45 @@
+section {
+
+  h2 {
+    margin: 4rem 0 2rem 0;
+    text-transform: uppercase;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .placeholder {
+    width: 300px;
+    height: 375px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    .btn-container {
+      padding: 4rem 0 2rem 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section {
+    .placeholder {
+      width: 376px;
+      height: 470px;
+    }
+  }
+}
+
+

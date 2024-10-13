@@ -1,0 +1,29 @@
+@if ((event$ | async)?.body ?? false; as event) {
+    <app-main-container>
+      <h1>{{ event.name }}</h1>
+
+      <div class="event-info-container">
+        <div class="img-container">
+          <img [ngSrc]="event.imageUrl" [alt]="event.name" width="300" height="375" priority>
+        </div>
+
+        <div class="info-container">
+          <div class="line-up">
+            <h3>LINE UP</h3>
+            @for (dj of event.principalLineUp; track dj.id) {
+              <h4>{{ dj.name }}</h4>
+            }
+
+            @for (dj of event.lineUp; track dj.id) {
+              <h5>{{ dj.name }}</h5>
+            }
+          </div>
+
+          <div class="info">
+            <h3>INFO</h3>
+            <p>{{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+    </app-main-container>
+}

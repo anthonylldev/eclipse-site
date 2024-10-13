@@ -1,0 +1,32 @@
+.events-container {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 95%);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+
+  .placeholder {
+    width: 300px;
+    height: 375px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  section {
+    .placeholder {
+      width: 376px;
+      height: 470px;
+    }
+  }
+}
